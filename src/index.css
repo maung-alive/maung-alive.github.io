@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .phone-alert {
+        @apply w-[90%] h-auto px-2 py-3 pl-10 overflow-hidden
+        bg-transparent
+        shadow-md rounded-md backdrop-blur-md
+        absolute top-20 left-1/2 -translate-x-1/2 -translate-y-1/2
+        animate-jumpin;
+    }
+    .phone-alert p.heading {
+        @apply text-base font-nunito font-bold flex items-center gap-x-2 mb-1;
+    }
+    .phone-alert p.body {
+        @apply text-gray-700 text-xs font-nunito font-medium w-full;
+    }
+    .phone-alert .icon {
+        @apply absolute top-0 left-0
+        py-4 px-2
+        flex items-center justify-center
+        rounded-b-full;
+    }
+}
